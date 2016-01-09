@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     var targetValue: Int = 0
     var currentValue = 50
     @IBOutlet weak var slider: UISlider!//Interface Builder doesn’t see any of your other variables, only the ones marked with @IBOutlet. You can refer to the slider object from anywhere inside the view controller using the slider variable.
+    @IBOutlet weak var targetLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // The viewDidLoad() message is sent by UIKit as soon as the view controller loads its user interface from the storyboard file. At this point, the view controller isn’t visible yet, so this is a good place to set instance variables to their proper initial values.
         startNewRound()
+        updateLabels()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +35,7 @@ class ViewController: UIViewController {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
         startNewRound()
+        updateLabels()
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
@@ -44,6 +47,10 @@ class ViewController: UIViewController {
         currentValue = 50
         slider.value = Float(currentValue)
     }
-
+    
+    func updateLabels() {
+targetLabel.text = String(targetValue)
+    }
+    
+    
 }
-
