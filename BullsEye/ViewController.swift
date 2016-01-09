@@ -27,7 +27,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAlert() {
-        let message = "The value of the slider is: \(currentValue)"         + "\nThe target value is: \(targetValue)"
+        var difference: Int
+        if currentValue > targetValue {
+            difference = currentValue - targetValue
+        } else if targetValue > currentValue {
+            difference = targetValue - currentValue
+        } else { difference = 0 }
+        let message = "The value of the slider is: \(currentValue)"
+            + "\nThe target value is: \(targetValue)"
+            + "\nThe difference is: \(difference)"
+        //The \n character sequence inserts a special “new line” character at that point, which will break up the text into two lines so the message is a little easier to read.+ "\nThe difference is \(difference)"
         //The \n character sequence inserts a special “new line” character at that point, which will break up the text into two lines so the message is a little easier to read.
         let alert = UIAlertController(title: "Hello, World",
             message: message, preferredStyle: .Alert)
