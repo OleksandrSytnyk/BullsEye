@@ -27,14 +27,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAlert() {
-        var difference = currentValue - targetValue
-        if difference < 0 {
-            difference = difference * -1 }
-        let message = "The value of the slider is: \(currentValue)"
-            + "\nThe target value is: \(targetValue)"
-            + "\nThe difference is: \(difference)"
-        //The \n character sequence inserts a special “new line” character at that point, which will break up the text into two lines so the message is a little easier to read.+ "\nThe difference is \(difference)"
-        //The \n character sequence inserts a special “new line” character at that point, which will break up the text into two lines so the message is a little easier to read.
+        let difference = abs(targetValue - currentValue)
+        let points = 100 - difference
+        let message = "You scored \(points) points"
         let alert = UIAlertController(title: "Hello, World",
             message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
