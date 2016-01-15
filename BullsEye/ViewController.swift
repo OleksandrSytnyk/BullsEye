@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var targetValue = 0
+    var targetValue = 0//instance variables
     var currentValue = 50
     var score = 0
     var round: Int = 0
@@ -31,28 +31,31 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showAlert() {
-        let difference = abs(targetValue - currentValue)
-        let points = 100 - difference
-        score += points
+        let difference = abs(targetValue - currentValue)//Difference can have a different value every time the player taps the Hit Me button, even though it is a constant. It's ppssoble because each time a method is invoked, its local variables and constants are created anew. The old values have long been forgotten and we get all new ones.
+        var points = 100 - difference//local variables
+       
         
         var title: String //переменная определена именно здесь, а не в начале метода, потому что только здесь и используется
         if difference == 0 {
             title = "Perfect!"
+            points += 100
         } else if difference < 5 {
             title = "You almost had it!"
+            if difference == 1 {
+                points += 50}//if inside if!!!
         } else if difference < 10 {
             title = "Pretty good!"
         } else {
             title = "Not even close..."
         }
+         score += points
         let message = "You scored \(points) points"
         let alert = UIAlertController(title: title,
             message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: {action in self.startNewRound()
+            self.updateLabels()})//This code is not performed right away, only when the OK button is tapped.
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
-        startNewRound()
-        updateLabels()
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
