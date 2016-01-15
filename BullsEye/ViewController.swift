@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // The viewDidLoad() message is sent by UIKit as soon as the view controller loads its user interface from the storyboard file. At this point, the view controller isn’t visible yet, so this is a good place to set instance variables to their proper initial values.
-        startNewRound()
+        startNewGame()
         updateLabels()
     }
 
@@ -62,6 +62,11 @@ class ViewController: UIViewController {
         currentValue = lroundf(slider.value)
     }
     
+    @IBAction func startOver() {
+        startNewGame()
+        updateLabels()
+    }
+    
     func startNewRound() {
         round += 1
         targetValue = 1 + Int(arc4random_uniform(100))
@@ -74,6 +79,15 @@ class ViewController: UIViewController {
         scoreaLabel.text = String(score)
         roundLabel.text = String(round)
     }
-    
-    
+
+    func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
+    }
+
+
+
+
+
 }
