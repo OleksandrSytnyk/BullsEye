@@ -21,6 +21,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // The viewDidLoad() message is sent by UIKit as soon as the view controller loads its user interface from the storyboard file. At this point, the view controller isn’t visible yet, so this is a good place to set instance variables to their proper initial values.
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, forState: .Normal)
+        //The thumb( the button on the scale) works like a button so it gets an image for the normal, un-pressed state and one for the highlighted state.
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighlighted, forState: .Highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        //left and right - directions where I need to expand or shrink image for sleders track. Without it xCode stretch the image pixels to bigger size making quality going down. 
+        if let trackLeftImage = UIImage(named: "SliderTrackLeft") {
+        let trackLeftResizable =
+        trackLeftImage.resizableImageWithCapInsets(insets)
+        slider.setMinimumTrackImage(trackLeftResizable, forState: .Normal)
+}
+ //The slider uses different images for the track on the left of the thumb (green) and the track to the right of the thumb (gray).
+if let trackRightImage = UIImage(named: "SliderTrackRight") {
+let trackRightResizable = trackRightImage.resizableImageWithCapInsets(insets)
+slider.setMaximumTrackImage(trackRightResizable, forState: .Normal)
+        }
         startNewGame()
         updateLabels()
     }
