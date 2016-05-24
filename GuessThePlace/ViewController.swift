@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BullsEye
+//  GuessThePlace
 //
 //  Created by MyMacbook on 1/6/16.
 //  Copyright © 2016 Oleksandr. All rights reserved.

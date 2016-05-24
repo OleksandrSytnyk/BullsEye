@@ -1,6 +1,6 @@
 //
 //  AboutViewController.swift
-//  BullsEye
+//  GuessThePlace
 //
 //  Created by MyMacbook on 1/14/16.
 //  Copyright © 2016 Oleksandr. All rights reserved.
@@ -15,7 +15,7 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    if let htmlFile = NSBundle.mainBundle().pathForResource("BullsEye", ofType: "html") {
+    if let htmlFile = NSBundle.mainBundle().pathForResource("GuessThePlace", ofType: "html") {
             let htmlData = NSData(contentsOfFile: htmlFile)
 let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
         webView.loadData(htmlData!, MIMEType: "text/html",

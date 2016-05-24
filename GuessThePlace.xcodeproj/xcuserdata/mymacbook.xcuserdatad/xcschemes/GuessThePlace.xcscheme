@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4AA7F511C3E357A0082BB52"
-               BuildableName = "BullsEye.app"
-               BlueprintName = "BullsEye"
-               ReferencedContainer = "container:BullsEye.xcodeproj">
+               BuildableName = "GuessThePlace.app"
+               BlueprintName = "GuessThePlace"
+               ReferencedContainer = "container:GuessThePlace.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4AA7F511C3E357A0082BB52"
-            BuildableName = "BullsEye.app"
-            BlueprintName = "BullsEye"
-            ReferencedContainer = "container:BullsEye.xcodeproj">
+            BuildableName = "GuessThePlace.app"
+            BlueprintName = "GuessThePlace"
+            ReferencedContainer = "container:GuessThePlace.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4AA7F511C3E357A0082BB52"
-            BuildableName = "BullsEye.app"
-            BlueprintName = "BullsEye"
-            ReferencedContainer = "container:BullsEye.xcodeproj">
+            BuildableName = "GuessThePlace.app"
+            BlueprintName = "GuessThePlace"
+            ReferencedContainer = "container:GuessThePlace.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4AA7F511C3E357A0082BB52"
-            BuildableName = "BullsEye.app"
-            BlueprintName = "BullsEye"
-            ReferencedContainer = "container:BullsEye.xcodeproj">
+            BuildableName = "GuessThePlace.app"
+            BlueprintName = "GuessThePlace"
+            ReferencedContainer = "container:GuessThePlace.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
